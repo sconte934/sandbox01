@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "c1" do |c1|
     c1.vm.box = "ubuntu/bionic64"
-    #a1.vm.synced_folder "automation/", "/automation"
+    c1.vm.synced_folder "automation/", "/automation"
     #a1.vm.network "forwarded_port", guest: 80, host: 8080
     #a1.vm.provision "ansible" do |ansible|
     #  ansible.playbook = "provisioning/a.yml"
