@@ -21,27 +21,27 @@ Vagrant.configure("2") do |config|
   #  s2.vm.box = "CumulusCommunity/cumulus-vx"
   #end
 
-  config.vm.define "m0" do |m0|
-    m0.vm.box = "CumulusCommunity/cumulus-vx"
-    m0.vm.network "private_network", virtualbox__intnet: "m0a1", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "m0rtr", auto_config: false
-  end
+  #config.vm.define "m0" do |m0|
+  #  m0.vm.box = "CumulusCommunity/cumulus-vx"
+  #  m0.vm.network "private_network", virtualbox__intnet: "m0a1", auto_config: false
+  #  m0.vm.network "private_network", virtualbox__intnet: "m0rtr", auto_config: false
+  #end
 
   config.vm.define "a1" do |a1|
     a1.vm.box = "ubuntu/bionic64"
-    a1.vm.synced_folder "automation/", "/automation"
-    a1.vm.network "forwarded_port", guest: 80, host: 8080
-    a1.vm.provision "ansible" do |ansible|
-      ansible.playbook = "provisioning/a.yml"
-    end
+    #a1.vm.synced_folder "automation/", "/automation"
+    #a1.vm.network "forwarded_port", guest: 80, host: 8080
+    #a1.vm.provision "ansible" do |ansible|
+    #  ansible.playbook = "provisioning/a.yml"
+    #end
     a1.vm.network "private_network", virtualbox__intnet: "m0a1", auto_config: false
   end
 
-  config.vm.define "rtr" do |rtr|
-    rtr.vm.box = "ubuntu/bionic64"
-    rtr.vm.network "private_network", virtualbox__intnet: "public", auto_config: false
-    rtr.vm.network "private_network", virtualbox__intnet: "m0rtr", auto_config: false
-  end
+  #config.vm.define "rtr" do |rtr|
+  #  rtr.vm.box = "ubuntu/bionic64"
+  #  rtr.vm.network "private_network", virtualbox__intnet: "public", auto_config: false
+  #  rtr.vm.network "private_network", virtualbox__intnet: "m0rtr", auto_config: false
+  #end
 
   #config.vm.define "h1" do |h1|
   #  h1.vm.box = "ubuntu/trusty64"
