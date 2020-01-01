@@ -21,10 +21,39 @@ Vagrant.configure("2") do |config|
   #  s2.vm.box = "CumulusCommunity/cumulus-vx"
   #end
 
-  config.vm.define "m0" do |m0|
+  config.vm.define "r1" do |r1|
     m0.vm.box = "CumulusCommunity/cumulus-vx"
-    m0.vm.network "private_network", virtualbox__intnet: "m0a1", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "m0rtr", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
+  end
+
+  config.vm.define "r2" do |r2|
+    m0.vm.box = "CumulusCommunity/cumulus-vx"
+    m0.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
+  end
+
+  config.vm.define "r3" do |r3|
+    m0.vm.box = "CumulusCommunity/cumulus-vx"
+    m0.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
+  end
+
+  config.vm.define "r4" do |r4|
+    m0.vm.box = "CumulusCommunity/cumulus-vx"
+    m0.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
+  end
+
+  config.vm.define "sw1" do |sw1|
+    m0.vm.box = "CumulusCommunity/cumulus-vx"
+    m0.vm.network "private_network", virtualbox__intnet: "link7", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link8", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
+    m0.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
   end
 
   config.vm.define "a1" do |a1|
