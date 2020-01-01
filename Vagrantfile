@@ -22,63 +22,75 @@ Vagrant.configure("2") do |config|
   #end
 
   config.vm.define "r1" do |r1|
-    m0.vm.box = "CumulusCommunity/cumulus-vx"
-    m0.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
+    r1.vm.box = "CumulusCommunity/cumulus-vx"
+    r1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
+    r1.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
+    r1.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
   end
 
   config.vm.define "r2" do |r2|
-    m0.vm.box = "CumulusCommunity/cumulus-vx"
-    m0.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
+    r2.vm.box = "CumulusCommunity/cumulus-vx"
+    r2.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
+    r2.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
   end
 
   config.vm.define "r3" do |r3|
-    m0.vm.box = "CumulusCommunity/cumulus-vx"
-    m0.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
+    r3.vm.box = "CumulusCommunity/cumulus-vx"
+    r3.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
+    r3.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
   end
 
   config.vm.define "r4" do |r4|
-    m0.vm.box = "CumulusCommunity/cumulus-vx"
-    m0.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
+    r4.vm.box = "CumulusCommunity/cumulus-vx"
+    r4.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
+    r4.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
+    r4.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
   end
 
   config.vm.define "sw1" do |sw1|
-    m0.vm.box = "CumulusCommunity/cumulus-vx"
-    m0.vm.network "private_network", virtualbox__intnet: "link7", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link8", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
-    m0.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
+    sw1.vm.box = "CumulusCommunity/cumulus-vx"
+    sw1.vm.network "private_network", virtualbox__intnet: "link7", auto_config: false
+    sw1.vm.network "private_network", virtualbox__intnet: "link8", auto_config: false
+    sw1.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
+    sw1.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
+    sw1.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
   end
 
-  config.vm.define "a1" do |a1|
-    a1.vm.box = "ubuntu/bionic64"
+  config.vm.define "c1" do |c1|
+    c1.vm.box = "ubuntu/bionic64"
     #a1.vm.synced_folder "automation/", "/automation"
     #a1.vm.network "forwarded_port", guest: 80, host: 8080
     #a1.vm.provision "ansible" do |ansible|
     #  ansible.playbook = "provisioning/a.yml"
     #end
-    a1.vm.network "private_network", virtualbox__intnet: "m0a1", auto_config: false
+    c1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
   end
 
-  #config.vm.define "rtr" do |rtr|
-  #  rtr.vm.box = "ubuntu/bionic64"
-  #  rtr.vm.network "private_network", virtualbox__intnet: "public", auto_config: false
-  #  rtr.vm.network "private_network", virtualbox__intnet: "m0rtr", auto_config: false
-  #end
+  config.vm.define "fw1" do |fw1|
+    fw1.vm.box = "ubuntu/bionic64"
+    fw1.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
+    fw1.vm.network "private_network", virtualbox__intnet: "link7", auto_config: false
+  end
 
-  #config.vm.define "h1" do |h1|
-  #  h1.vm.box = "ubuntu/trusty64"
-  #end
+  config.vm.define "lb1" do |lb1|
+    lb1.vm.box = "ubuntu/bionic64"
+    lb1.vm.network "private_network", virtualbox__intnet: "link8", auto_config: false
+  end
 
-  #config.vm.define "h2" do |h2|
-  #  h2.vm.box = "ubuntu/trusty64"
-  #end
+  config.vm.define "www1" do |www1|
+    www1.vm.box = "ubuntu/bionic64"
+    www1.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
+  end
+
+  config.vm.define "www2" do |www2|
+    www2.vm.box = "ubuntu/bionic64"
+    www2.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
+  end
+
+  config.vm.define "db1" do |db1|
+    db1.vm.box = "ubuntu/bionic64"
+    db1.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
+  end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
