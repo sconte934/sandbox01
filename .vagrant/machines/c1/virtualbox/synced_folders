@@ -1,1 +1,1 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Conte/Desktop/dev/sandbox01","disabled":false,"__vagrantfile":true}}}
+{"virtualbox":{"/automation":{"guestpath":"/automation","hostpath":"C:/Users/Conte/Desktop/dev/sandbox01/automation","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/Conte/Desktop/dev/sandbox01","disabled":false,"__vagrantfile":true}}}
