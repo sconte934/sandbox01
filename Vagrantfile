@@ -13,14 +13,6 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
 
-  #config.vm.define "s1" do |s1|
-  #  s1.vm.box = "CumulusCommunity/cumulus-vx"
-  #end
-
-  #config.vm.define "s2" do |s2|
-  #  s2.vm.box = "CumulusCommunity/cumulus-vx"
-  #end
-
   config.vm.define "r1" do |r1|
     r1.vm.box = "CumulusCommunity/cumulus-vx"
     r1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
@@ -59,8 +51,8 @@ Vagrant.configure("2") do |config|
   config.vm.define "c1" do |c1|
     c1.vm.box = "ubuntu/bionic64"
     c1.vm.synced_folder "automation/", "/automation"
-    #a1.vm.network "forwarded_port", guest: 80, host: 8080
-    #a1.vm.provision "ansible" do |ansible|
+    #c1.vm.network "forwarded_port", guest: 80, host: 8080
+    #c1.vm.provision "ansible" do |ansible|
     #  ansible.playbook = "provisioning/a.yml"
     #end
     c1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
