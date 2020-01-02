@@ -1,6 +1,6 @@
 # Sandbox Environment
 
-Install the following on the local host:
+###Install the following on the local host:
 
 | Name          | Requirements  | Link  |
 | ------------- |:-------------:| -----:|
@@ -11,10 +11,10 @@ Install the following on the local host:
 | Git           |               | link  |
 | Putty         |               | link  |
 
-Basic Setup Requirements:
+###Basic Setup Requirements:
 
 
-Vagrant box image used for setup:
+###Vagrant box image used for setup:
 
 | Name              | Type                     | Vagrant Box                 |
 | ----------------- |:------------------------:| ---------------------------:|
