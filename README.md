@@ -24,3 +24,5 @@
 | Ubuntu 18.04 LTS  | Operating System         | [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64)|
 
 ### Topology
+
+![Network Topology](diagram.png)
