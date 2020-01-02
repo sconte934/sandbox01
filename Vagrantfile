@@ -17,24 +17,24 @@ Vagrant.configure("2") do |config|
     r1.vm.box = "CumulusCommunity/cumulus-vx"
     r1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
     r1.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
-    r1.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
+    r1.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
   end
 
   config.vm.define "r2" do |r2|
     r2.vm.box = "CumulusCommunity/cumulus-vx"
     r2.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
-    r2.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
+    r2.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
   end
 
   config.vm.define "r3" do |r3|
     r3.vm.box = "CumulusCommunity/cumulus-vx"
-    r3.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
+    r3.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
     r3.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
   end
 
   config.vm.define "r4" do |r4|
     r4.vm.box = "CumulusCommunity/cumulus-vx"
-    r4.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
+    r4.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
     r4.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
     r4.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
   end
