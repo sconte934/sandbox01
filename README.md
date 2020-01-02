@@ -1,6 +1,6 @@
 # Sandbox Environment
 
-### Install the following on the local host:
+### Install the following to the local host (windows):
 
 | Name          | Requirements  | Link  |
 | ------------- |:-------------:|:-----:|
@@ -13,6 +13,8 @@
 
 ### Basic Setup Requirements:
 
+1. Git setup (Configuration, Cloning, SSH Keys, etc.)
+2. Disable Hyper-V (VirtualBox conflict resolution)
 
 ### Vagrant box image used for setup:
 
@@ -20,3 +22,5 @@
 | ----------------- |:------------------------:| :---------------------------:|
 | Cumulus Linux     | Network Operating System | [CumulusCommunity/cumulus-vx](https://app.vagrantup.com/CumulusCommunity/boxes/cumulus-vx)|
 | Ubuntu 18.04 LTS  | Operating System         | [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64)|
+
+### Topology
