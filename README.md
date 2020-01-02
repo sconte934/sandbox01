@@ -1,9 +1,14 @@
-# sandbox01
-Sandbox Environment
+# Sandbox Environment
 
-Download the following tools:
+Install the following on the local host:
 
-1. Vagrant
-  1. https://www.vagrantup.com/
-2. Git
-3. Atom
+| Name          | Requirements  | Link  |
+| ------------- |:-------------:| -----:|
+| Vagrant       |               | link  |
+| VirtualBox    | version 6.0   | link  |
+| Wireshark     |               | link  |
+| Atom          |               | link  |
+| Git           |               | link  |
+| Putty         |               | link  |
+
+Basic Setup Requirements:
