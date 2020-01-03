@@ -23,6 +23,19 @@
 | Cumulus Linux     | Network Operating System | [CumulusCommunity/cumulus-vx](https://app.vagrantup.com/CumulusCommunity/boxes/cumulus-vx)|
 | Ubuntu 18.04 LTS  | Operating System         | [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64)|
 
+### Software Elements
+
+| Name              | Type                     | Information Link                |
+| ----------------- |:------------------------:|:---------------------------:|
+| vault             | Secure Key Management    |                             |
+| ansible           | Configuration Management |                             |
+| GitHub Actions    | CI, Pipeline Management  |                             |
+| docker            | Container Engine         |                             |
+| nginx             | Web Server               |                             |
+| mysql             | Database                 |                             |
+| HA Proxy          | Load Balancer            |                             |
+| iptables          | Firewall                 |                             |
+
 ### Configuration Manual
 
 1. [wiki](https://github.com/sconte934/sandbox01/wiki)
