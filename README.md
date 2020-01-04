@@ -14,6 +14,7 @@
 ### Basic Setup Requirements:
 
 1. Git setup (Clone, Configuration & SSH Keys)
+** Open "Git Bash"
 2. Disable Hyper-V (VirtualBox conflict resolution)
 
 ### Vagrant box image used for setup:
