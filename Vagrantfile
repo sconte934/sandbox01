@@ -50,8 +50,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "c1" do |c1|
     c1.vm.box = "ubuntu/bionic64"
-    c1.vm.synced_folder "automation/", "/automation"
-    #c1.vm.network "forwarded_port", guest: 80, host: 8080
+    c1.vm.synced_folder "share/", "~/share"
     #c1.vm.provision "ansible" do |ansible|
     #  ansible.playbook = "provisioning/a.yml"
     #end
@@ -71,18 +70,21 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "www1" do |www1|
     www1.vm.box = "ubuntu/bionic64"
+    www1.vm.synced_folder "share/", "~/share"
     www1.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
     www1.vm.network "forwarded_port", guest: 80, host: 8081
   end
 
   config.vm.define "www2" do |www2|
     www2.vm.box = "ubuntu/bionic64"
+    www2.vm.synced_folder "share/", "~/share"
     www2.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
     www2.vm.network "forwarded_port", guest: 80, host: 8082
   end
 
   config.vm.define "db1" do |db1|
     db1.vm.box = "ubuntu/bionic64"
+    db1.vm.synced_folder "share/", "~/share"
     db1.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
   end
 
