@@ -21,7 +21,7 @@
         * git config --global user.email "Your E-mail Here"
         * ssh-keygen -t rsa -C "Your E-mail Here"
         * cat /c/Users/Conte/.ssh/id_rsa.pub
-    * Copy the output
+            * Copy the output
     * Open a browser and go to https://github.com/settings/ssh/new
         * Fill in a title "My_XPS_Laptop"
         * Paste the ssh key output that was copied earlier
