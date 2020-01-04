@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "fw1" do |fw1|
-    fw1.vm.box = "ubuntu/bionic64"
+    fw1.vm.box = "ubuntu/xenial64"
     fw1.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
     fw1.vm.network "private_network", virtualbox__intnet: "link7", auto_config: false
   end
