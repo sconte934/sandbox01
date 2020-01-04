@@ -2,18 +2,18 @@
 
 ### Install the following to the local host (windows):
 
-| Name          | Requirements  | Link  |
-| ------------- |:-------------:|:-----:|
-| Vagrant       |               | [link](https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.msi) |
-| VirtualBox    | version 6.0   | [link](https://download.virtualbox.org/virtualbox/6.0.14/VirtualBox-6.0.14-133895-Win.exe) |
-| Wireshark     |               | [link](https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.0.exe) |
-| Atom          |               | [link](https://github.com/atom/atom/releases/download/v1.42.0/AtomSetup-x64.exe) |
-| Git           |               | [link](https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-64-bit.exe) |
-| Putty         |               | [link](https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.73-installer.msi) |
+| Name          | Requirements     | Link  |
+| ------------- |:----------------:|:-----:|
+| Vagrant       | version 2.2.6    | [link](https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.msi) |
+| VirtualBox    | version 6.0.14   | [link](https://download.virtualbox.org/virtualbox/6.0.14/VirtualBox-6.0.14-133895-Win.exe) |
+| Wireshark     | version 3.2.0    | [link](https://1.na.dl.wireshark.org/win64/Wireshark-win64-3.2.0.exe) |
+| Atom          | version 1.42.0   | [link](https://github.com/atom/atom/releases/download/v1.42.0/AtomSetup-x64.exe) |
+| Git           | version 2.24.1.2 | [link](https://github.com/git-for-windows/git/releases/download/v2.24.1.windows.2/Git-2.24.1.2-64-bit.exe) |
+| Putty         | version 0.72     | [link](https://the.earth.li/~sgtatham/putty/latest/w64/putty-64bit-0.73-installer.msi) |
 
 ### Basic Setup Requirements:
 
-1. Git setup (Configuration, Cloning, SSH Keys, etc.)
+1. Git setup (Clone, Configuration & SSH Keys)
 2. Disable Hyper-V (VirtualBox conflict resolution)
 
 ### Vagrant box image used for setup:
