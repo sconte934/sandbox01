@@ -26,6 +26,8 @@
         * Fill in a title "My_XPS_Laptop"
         * Paste the ssh key output that was copied earlier
         * Click "Add SSH key"
+    * Go back to the "Git Bash" window and execute
+        * ``` ssh -T git@github.com ```
 2. Disable Hyper-V (VirtualBox conflict resolution)
 
 ### Vagrant box image used for setup:
