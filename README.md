@@ -15,12 +15,12 @@
 
 1. Github setup (Clone, Configuration & SSH Keys)
     * Open "Git Bash"
-        * Execute git clone https://github.com/sconte934/sandbox01.git
-        * cd sandbox01
-        * git config --global user.name "Your Name Here"
-        * git config --global user.email "Your E-mail Here"
-        * ssh-keygen -t rsa -C "Your E-mail Here"
-        * cat /c/Users/Conte/.ssh/id_rsa.pub
+        * Execute ``` git clone https://github.com/sconte934/sandbox01.git ```
+        * ``` cd sandbox01 ```
+        * ``` git config --global user.name "Your Name Here" ```
+        * ``` git config --global user.email "Your E-mail Here" ```
+        * ``` ssh-keygen -t rsa -C "Your E-mail Here" ```
+        * ``` cat /c/Users/Conte/.ssh/id_rsa.pub ```
             * Copy the output
     * Open a browser and go to https://github.com/settings/ssh/new
         * Fill in a title "My_XPS_Laptop"
