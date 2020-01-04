@@ -72,11 +72,13 @@ Vagrant.configure("2") do |config|
   config.vm.define "www1" do |www1|
     www1.vm.box = "ubuntu/bionic64"
     www1.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
+    www1.vm.network "forwarded_port", guest: 80, host: 8081
   end
 
   config.vm.define "www2" do |www2|
     www2.vm.box = "ubuntu/bionic64"
     www2.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
+    www2.vm.network "forwarded_port", guest: 80, host: 8082
   end
 
   config.vm.define "db1" do |db1|
