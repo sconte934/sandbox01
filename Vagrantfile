@@ -13,6 +13,9 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
 
+  config.ssh.username = 'vagrant'
+  config.ssh.password = 'vagrant'
+
   config.vm.define "r1" do |r1|
     r1.vm.box = "CumulusCommunity/cumulus-vx"
     r1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
