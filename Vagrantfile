@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "c1" do |c1|
-    c1.vm.box = "ubuntu/bionic64"
+    c1.vm.box = "hashicorp/bionic64"
     c1.vm.synced_folder "share/", "/home/vagrant/share/"
     #c1.vm.provision "ansible" do |ansible|
     #  ansible.playbook = "provisioning/a.yml"
@@ -61,32 +61,32 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "fw1" do |fw1|
-    fw1.vm.box = "ubuntu/xenial64"
+    fw1.vm.box = "hashicorp/bionic64"
     fw1.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
     fw1.vm.network "private_network", virtualbox__intnet: "link7", auto_config: false
   end
 
   config.vm.define "lb1" do |lb1|
-    lb1.vm.box = "ubuntu/bionic64"
+    lb1.vm.box = "hashicorp/bionic64"
     lb1.vm.network "private_network", virtualbox__intnet: "link8", auto_config: false
   end
 
   config.vm.define "www1" do |www1|
-    www1.vm.box = "ubuntu/bionic64"
+    www1.vm.box = "hashicorp/bionic64"
     www1.vm.synced_folder "share/", "/home/vagrant/share/"
     www1.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
     www1.vm.network "forwarded_port", guest: 80, host: 8081
   end
 
   config.vm.define "www2" do |www2|
-    www2.vm.box = "ubuntu/bionic64"
+    www2.vm.box = "hashicorp/bionic64"
     www2.vm.synced_folder "share/", "/home/vagrant/share/"
     www2.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
     www2.vm.network "forwarded_port", guest: 80, host: 8082
   end
 
   config.vm.define "db1" do |db1|
-    db1.vm.box = "ubuntu/bionic64"
+    db1.vm.box = "hashicorp/bionic64"
     db1.vm.synced_folder "share/", "/home/vagrant/share/"
     db1.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
   end

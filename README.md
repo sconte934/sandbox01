@@ -34,9 +34,7 @@
 | Name              | Type                     |  Vagrant Box                 |
 | ----------------- |:------------------------:| :---------------------------:|
 | Cumulus Linux     | Network Operating System | [CumulusCommunity/cumulus-vx](https://app.vagrantup.com/CumulusCommunity/boxes/cumulus-vx)|
-| Ubuntu 18.04 LTS  | Operating System         | [ubuntu/bionic64](https://app.vagrantup.com/ubuntu/boxes/bionic64)|
-| Ubuntu 16.04 LTS  | Operating System         | [ubuntu/xenial64](https://app.vagrantup.com/ubuntu/boxes/xenial64)
-* Ubuntu 16.04 LTS was utilized to work around the "ip forwarding" persistence bug on fw1 [link](https://bugs.launchpad.net/ubuntu/+source/procps/+bug/50093)
+| Ubuntu 18.04 LTS  | Operating System         | [hashicorp/bionic64](https://app.vagrantup.com/hashicorp/boxes/bionic64)|
 
 ### Software Elements
 
