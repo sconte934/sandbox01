@@ -21,18 +21,21 @@ Vagrant.configure("2") do |config|
     r1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
     r1.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
     r1.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
+    r1.vm.network "forwarded_port", guest: 22, host: 2201, id: 'ssh'
   end
 
   config.vm.define "r2" do |r2|
     r2.vm.box = "CumulusCommunity/cumulus-vx"
     r2.vm.network "private_network", virtualbox__intnet: "link2", auto_config: false
     r2.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
+    r2.vm.network "forwarded_port", guest: 22, host: 2202, id: 'ssh'
   end
 
   config.vm.define "r3" do |r3|
     r3.vm.box = "CumulusCommunity/cumulus-vx"
     r3.vm.network "private_network", virtualbox__intnet: "link3", auto_config: false
     r3.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
+    r3.vm.network "forwarded_port", guest: 22, host: 2203, id: 'ssh'
   end
 
   config.vm.define "r4" do |r4|
@@ -40,6 +43,7 @@ Vagrant.configure("2") do |config|
     r4.vm.network "private_network", virtualbox__intnet: "link4", auto_config: false
     r4.vm.network "private_network", virtualbox__intnet: "link5", auto_config: false
     r4.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
+    r4.vm.network "forwarded_port", guest: 22, host: 2204, id: 'ssh'
   end
 
   config.vm.define "sw1" do |sw1|
@@ -49,6 +53,7 @@ Vagrant.configure("2") do |config|
     sw1.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
     sw1.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
     sw1.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
+    sw1.vm.network "forwarded_port", guest: 22, host: 2205, id: 'ssh'
   end
 
   config.vm.define "c1" do |c1|
@@ -58,17 +63,20 @@ Vagrant.configure("2") do |config|
     #  ansible.playbook = "provisioning/a.yml"
     #end
     c1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
+    c1.vm.network "forwarded_port", guest: 22, host: 2206, id: 'ssh'
   end
 
   config.vm.define "fw1" do |fw1|
     fw1.vm.box = "hashicorp/bionic64"
     fw1.vm.network "private_network", virtualbox__intnet: "link6", auto_config: false
     fw1.vm.network "private_network", virtualbox__intnet: "link7", auto_config: false
+    fw1.vm.network "forwarded_port", guest: 22, host: 2207, id: 'ssh'
   end
 
   config.vm.define "lb1" do |lb1|
     lb1.vm.box = "hashicorp/bionic64"
     lb1.vm.network "private_network", virtualbox__intnet: "link8", auto_config: false
+    lb1.vm.network "forwarded_port", guest: 22, host: 2208, id: 'ssh'
   end
 
   config.vm.define "www1" do |www1|
@@ -76,6 +84,7 @@ Vagrant.configure("2") do |config|
     www1.vm.synced_folder "share/", "/home/vagrant/share/"
     www1.vm.network "private_network", virtualbox__intnet: "link9", auto_config: false
     www1.vm.network "forwarded_port", guest: 80, host: 8081
+    www1.vm.network "forwarded_port", guest: 22, host: 2209, id: 'ssh'
   end
 
   config.vm.define "www2" do |www2|
@@ -83,12 +92,14 @@ Vagrant.configure("2") do |config|
     www2.vm.synced_folder "share/", "/home/vagrant/share/"
     www2.vm.network "private_network", virtualbox__intnet: "link10", auto_config: false
     www2.vm.network "forwarded_port", guest: 80, host: 8082
+    www2.vm.network "forwarded_port", guest: 22, host: 2210, id: 'ssh'
   end
 
   config.vm.define "db1" do |db1|
     db1.vm.box = "hashicorp/bionic64"
     db1.vm.synced_folder "share/", "/home/vagrant/share/"
     db1.vm.network "private_network", virtualbox__intnet: "link11", auto_config: false
+    db1.vm.network "forwarded_port", guest: 22, host: 2211, id: 'ssh'
   end
 
   # Disable automatic box update checking. If you disable this, then
