@@ -1,0 +1,21 @@
+[all:vars]
+ansible_user=vagrant
+ansible_ssh_pass=vagrant
+[client]
+c1 ansible_port=2201 ansible_host=10.0.2.2
+[routers]
+r1 ansible_port=2202 ansible_host=10.0.2.2
+r2 ansible_port=2203 ansible_host=10.0.2.2
+r3 ansible_port=2204 ansible_host=10.0.2.2
+r4 ansible_port=2205 ansible_host=10.0.2.2
+[switches]
+sw1 ansible_port=2207 ansible_host=10.0.2.2
+[firewalls]
+fw1 ansible_port=2206 ansible_host=10.0.2.2
+[loadbalancers]
+lb1 ansible_port=2208 ansible_host=10.0.2.2
+[webservers]
+www1 ansible_port=2209 ansible_host=10.0.2.2
+www2 ansible_port=2210 ansible_host=10.0.2.2
+[dbservers]
+db1 ansible_port=2211 ansible_host=10.0.2.2
