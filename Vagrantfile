@@ -59,6 +59,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "v1" do |v1|
     v1.vm.box = "hashicorp/bionic64"
     v1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
+    v1.vm.network "forwarded_port", guest: 8200, host: 8200
   end
 
   config.vm.define "c1" do |c1|
