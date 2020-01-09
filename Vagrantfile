@@ -56,6 +56,11 @@ Vagrant.configure("2") do |config|
     sw1.vm.network "forwarded_port", guest: 22, host: 2205, id: 'ssh'
   end
 
+  config.vm.define "v1" do |v1|
+    v1.vm.box = "hashicorp/bionic64"
+    v1.vm.network "private_network", virtualbox__intnet: "link1", auto_config: false
+  end
+
   config.vm.define "c1" do |c1|
     c1.vm.box = "hashicorp/bionic64"
     c1.vm.synced_folder "share/", "/home/vagrant/share/"
